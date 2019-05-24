@@ -52,6 +52,15 @@ public class MainController implements Initializable {
         window.show();
 
     }
+    @FXML 
+    private void goMenu(ActionEvent event) throws Exception
+    {
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("NewUser.fxml"));
+        Scene tableViewScene = new Scene(tableViewParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(tableViewScene);
+        window.show();
+    }
 
 
     @Override
